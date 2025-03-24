@@ -1,16 +1,15 @@
 {
-  "version": 3,
-  "functions": {
-    "server.js": {
-      "runtime": "nodejs20.x",
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "server.js"
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
     }
   ]
 }

@@ -15,8 +15,9 @@ app.use(express.json()); // Middleware to parse JSON
 // CORS setup to allow frontend requests
 app.use(
   cors({
-    origin: ["http://127.0.0.1:5500", "http://127.0.0.1:5500", "*"], // Open to all origins (for dev). Change this to frontend URL in production.
+    origin: ["https://observation.vercel.app/signin.html", "*"], // Open to all origins (for dev). Change this to frontend URL in production.
     methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
   })
 );
 app.use(bodyParser.json());
@@ -32,7 +33,7 @@ mongoose
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("Hello, MongoDB is connected!");
+  res.json("Hello, Server is Ready!");
 });
 
 // POST API for Observations
