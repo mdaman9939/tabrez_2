@@ -6,7 +6,6 @@ require("dotenv").config(); // Add this line at the top
 
 const Observation = require("./models/Observation");
 const authRoutes = require("./routes/authRoutes");
-
 const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
