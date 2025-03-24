@@ -1,16 +1,10 @@
 {
   "version": 2,
   "name": "testapp",
-  "builds": [
+  "rewrites": [
     {
-      "src": "server/server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/server/server.js"
+      "source": "/(.*)",
+      "destination": "/server/server.js"
     }
   ]
 }
