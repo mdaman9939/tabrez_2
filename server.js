@@ -2,15 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+require("dotenv").config(); // Add this line at the top
 
 const Observation = require("./models/Observation");
 const authRoutes = require("./routes/authRoutes");
 
 const app = express();
-const PORT = 5000;
-const MONGO_URI =
-  "mongodb+srv://mdaman9939:A123456@cluster0.5kgahgx.mongodb.net/tabrez-observation?retryWrites=true&w=majority&appName=Cluster0"; // Change this to your MongoDB URI
-
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json()); // Middleware to parse JSON
 
 // Middleware
