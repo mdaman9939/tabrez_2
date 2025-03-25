@@ -16,8 +16,8 @@ app.use(express.json()); // Middleware to parse JSON
 app.use(
   cors({
     origin: [
-       "https://tabrez-2-admin.vercel.app/",
-      "https://tabrez-2-employee-from.vercel.app/",
+       "https://tabrez-2-admin.vercel.app",
+      "https://tabrez-2-employee-from.vercel.app",
          "https://tabrez-admin.vercel.app",
       "https://tabrez-form.vercel.app",
      
