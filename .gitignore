@@ -1,5 +1,4 @@
 .vercel
-
 .env
 
 # Logs
@@ -11,11 +10,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+node_modules/
 dist
 dist-ssr
 *.local
-node_modules/
 
 # Editor directories and files
 .vscode/*
@@ -27,4 +25,3 @@ node_modules/
 *.njsproj
 *.sln
 *.sw?
-node_modules/ 
