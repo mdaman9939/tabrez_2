@@ -18,6 +18,8 @@ app.use(
     origin: [
       "https://tabrez-admin.vercel.app",
       "https://tabrez-form.vercel.app",
+      "https://tabrez-2-admin.vercel.app/",
+      "https://tabrez-2-employee-from.vercel.app/",
     ], // Open to all origins (for dev). Change this to frontend URL in production.
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
