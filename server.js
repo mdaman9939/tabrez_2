@@ -4,13 +4,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const Observation = require("./models/Observation");
-const authRoutes = require("./routes/authRoutes");
-const app = express();
-const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI;
-app.use(express.json()); // Middleware to parse JSON
-
 // Middleware
 // CORS setup to allow frontend requests
 app.use(
@@ -26,6 +19,15 @@ app.use(
     credentials: true,
   })
 );
+
+const Observation = require("./models/Observation");
+const authRoutes = require("./routes/authRoutes");
+const app = express();
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGO_URI;
+app.use(express.json()); // Middleware to parse JSON
+
+
 app.use(bodyParser.json());
 
 // Routes
