@@ -16,10 +16,11 @@ app.use(express.json()); // Middleware to parse JSON
 app.use(
   cors({
     origin: [
-      "https://tabrez-admin.vercel.app",
-      "https://tabrez-form.vercel.app",
-      "https://tabrez-2-admin.vercel.app/",
+       "https://tabrez-2-admin.vercel.app/",
       "https://tabrez-2-employee-from.vercel.app/",
+         "https://tabrez-admin.vercel.app",
+      "https://tabrez-form.vercel.app",
+     
     ], // Open to all origins (for dev). Change this to frontend URL in production.
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
